@@ -195,7 +195,9 @@ foreach $arg (@ARGV)
 
 $win_arch or die '$win_arch not set in myConfig';
 
-if ($win_arch eq 'x') {
+if ($win_arch eq 'x')
+{
+
     @xdirs = ();
 
     if (defined $X11)
@@ -218,9 +220,12 @@ if ($win_arch eq 'x') {
         my @exts = ("", ".cmd", ".bat");
         
         LOOK:
-        foreach $dir (split($Config::Config{path_sep},$ENV{'PATH'})) {
-            foreach $ext (@exts) {
-                if (-x "$dir/xmkmf$ext" && -r "$dir/xmkmf$ext") {
+        foreach $dir (split($Config::Config{path_sep},$ENV{'PATH'}))
+        {
+            foreach $ext (@exts)
+            {
+                if (-x "$dir/xmkmf$ext" && -r "$dir/xmkmf$ext")
+                {
                     $xmkmf = "$dir/xmkmf$ext";
                     last LOOK;
                 }
@@ -228,15 +233,18 @@ if ($win_arch eq 'x') {
         }
         
         $uiline = undef;
-        if (defined $xmkmf) {
+        if (defined $xmkmf)
+        {
             open(XMKMF,$xmkmf) || die("Can't open $xmkmf: $!\n");
-            while(<XMKMF>) {
+            while(<XMKMF>)
+            {
                 next unless /UseInstalled/o;
                 warn ("Odd, two lines in the $xmkmf file that have UseInstalled on them:\n$uidir$_") if defined $uiline;
                 $uidir = $_;
             }
             close(XMKMF);
-            while (defined $uidir) {
+            while (defined $uidir)
+            {
                 last unless ($uidir =~ s!^.*-I(\S+)/lib/X11/config!!o);
                 $try = $1;
                 $try =~ s/'x11root'/$ENV{X11ROOT}/;
@@ -322,11 +330,15 @@ if ($win_arch eq 'x') {
 
     $inc = ($xinc eq "-I/usr/include") ? "" : $xinc;
 
-} elsif ($win_arch eq 'open32') {
+}
+elsif ($win_arch eq 'open32')
+{
     
-    unless (defined $toolkit) {
+    unless (defined $toolkit)
+    {
         my @path = split /;/, $ENV{PATH};
-        foreach (@path) {
+        foreach (@path)
+        {
             next unless m:[\\/]toolkit[\\/]bin:i;
             my $tlk = "$`/toolkit";
             next unless -d "$tlk/H" and -f "$tlk/H/os2win.h";
@@ -341,12 +353,17 @@ if ($win_arch eq 'x') {
     $define .= " -D__WIN32__";
     $xlib = "-L$toolkit/LIB -lpmwinx";
     
-} elsif ($win_arch eq 'pm') {
+}
+elsif ($win_arch eq 'pm')
+{
+
     $define .= " -D__PM__";
     $inc = "-I../pTk/mTk/xlib -I../../pTk/mTk/xlib -IpTk/mTk/xlib -ImTk/os2_rc";
     $xlib = "";                          # No library is needed
     
-} elsif ($IsWin32) {
+}
+elsif ($IsWin32)
+{
     $inc = '-I$(TKDIR)/pTk/mTk/xlib';
 }
 
@@ -383,7 +400,8 @@ sub WriteIfChanged
 
 # Config File Write ( Not Needed when building tkTable )
 # if (!defined($MakefileName) || $MakefileName eq 'Makefile')
-if(0) {
+if(0)
+{
     my $config = "package Tk::Config;\nrequire Exporter;\nuse base qw(Exporter);\n";
     my $sym;
     my @export = ();
