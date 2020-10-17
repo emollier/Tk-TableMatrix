@@ -83,7 +83,11 @@ Tk::MMutil::TkExtMakefile(
     'LIBS'    => \@libs,
     'OBJECT'  => '$(O_FILES)',
     'clean'      => { FILES => 'pTk/tkConfig.h ' },
-    'PREREQ_PM'  => { Tk => 800.022},
+    'PREREQ_PM'  => {
+        Tk => 800.022,
+        Tk::MMtry => 0,
+        Tk::MMutil => 0,
+    },
     @macro
    );
 
