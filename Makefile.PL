@@ -85,9 +85,12 @@ Tk::MMutil::TkExtMakefile(
     'clean'      => { FILES => 'pTk/tkConfig.h ' },
     'PREREQ_PM'  => {
         Tk => 800.022,
-        Tk::MMtry => 0,
-        Tk::MMutil => 0,
     },
+	'CONFIGURE_REQUIRES' => {
+		"ExtUtils::MakeMaker" => 6.52,
+		Tk::MMtry => 0,
+        Tk::MMutil => 0,
+	},
     @macro
    );
 
