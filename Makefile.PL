@@ -91,6 +91,16 @@ Tk::MMutil::TkExtMakefile(
 		Tk::MMtry => 0,
         Tk::MMutil => 0,
 	},
+	'META_MERGE' => {
+		"meta-spec" => { version => 2 },
+		resources => {
+			repository => {
+				type => 'git',
+				url => 'https://github.com/asb-capfan/Tk-TableMatrix.git',
+				web => 'https://github.com/asb-capfan/Tk-TableMatrix',
+			},
+		},
+	},
     @macro
    );
 
