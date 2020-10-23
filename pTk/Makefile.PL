@@ -236,7 +236,7 @@ sub MY::postamble {
 
     $dep .= $self->dir_target(@{$self->{'dir_targets'}}); 
     
-    # add some additional dir targets - reason currently unknown. Use $(DFSEP) as dir separatir or makefile will not find target (target uses $(DFSEP) too).
+    # add some additional dir targets - reason currently unknown. Use $(DFSEP) as dir separator or makefile will not find target (target uses $(DFSEP) too).
     $dep .= "config :: " . join(" \\\n\t",map($_.'$(DFSEP).exists',@{$self->{'dir_targets'}})) .
         "\n\t".$self->{NOECHO}."\$(NOOP)\n";
 
