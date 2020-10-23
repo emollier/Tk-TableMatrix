@@ -55,23 +55,7 @@ sub MY::post_initialize
  my ($self) = @_;
  my %mTk;
  my $dir;
- my @list;
- if ($Tk::MMutil::IsWin32)
-  {  # only Tktable needed for everything
-   @list = ($mTkDir);
-  }
- elsif ($win_arch eq 'open32')
-  {
-   @list = ($mTkDir);
-  }
- elsif ($win_arch eq 'pm')
-  {
-   @list = ($mTkDir);
-  }
- else
-  {
-   @list = ($mTkDir);
-  }
+ my @list = ($mTkDir);
  print STDERR "Generating Dependencies for $^O, win_arch=$win_arch\n";
  foreach $dir (@list)
   {
