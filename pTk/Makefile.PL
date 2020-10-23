@@ -66,7 +66,7 @@ sub MY::post_initialize
     {
      while (<EXC>)
       {          
-       chomp;    
+       s/\s+$//s;
        s/#.*$//;
        next unless /\S/;
        $mTk{$_} = $self->catfile($src,$_) unless (exists $mTk{$_});
@@ -80,7 +80,7 @@ sub MY::post_initialize
       {            
        while (<EXC>)
         {          
-         chomp;    
+         s/\s+$//s;
          s/#.*$//;
          next unless /\S/;
          $exc{$_} = 1;
