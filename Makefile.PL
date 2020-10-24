@@ -152,7 +152,7 @@ sub needs_Test
  my $code = 0;
  while (<TFILE>)
   {
-   last if ($code = /^\s*(use|require)\s+Test\b/);
+   last if ($code = m/^\s*(use|require)\s+Test\b/);
   }
  close(TFILE);
  warn "Skipping test $file needs 'Test.pm':$_" if $code;
