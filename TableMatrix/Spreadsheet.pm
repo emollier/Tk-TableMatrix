@@ -14,7 +14,7 @@ Tk::TableMatrix::Spreadsheet - Table Display with Spreadsheet-like bindings.
     -titlerows => 1, -titlecols => 1,
     -variable => $arrayVar,
     -selectmode => 'extended',
-	-bg => 'white',
+    -bg => 'white',
   );
 
 =head1 DESCRIPTION
