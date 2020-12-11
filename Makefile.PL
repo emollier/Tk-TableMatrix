@@ -64,7 +64,7 @@ delete $dir->{'pTk'};
 
 # Find path to existing pTk include files
 my $ptkPath = Tk::MMutil::findINC('Tk/pTk/Lang.h');
-$ptkPath =~ s/\/Lang.h$//g;
+$ptkPath =~ s/\/Lang\.h$//g;
 
 
 
