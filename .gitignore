@@ -3,6 +3,8 @@
 /META.yml
 /META.json
 /MYMETA.*
+/pod/MYMETA.*
+/pTk/MYMETA.*
 *.o
 *.pm.tdy
 *.bs
@@ -21,6 +23,11 @@ nytprof.out
 /*.gz
 /Makefile
 /Makefile.old
+/pod/Makefile
+/pod/Makefile.old
+/pTk/Makefile
+/pTk/Makefile.old
 /MANIFEST.bak
 /pm_to_blib
+/pTk/pm_to_blib
 /*.zip
