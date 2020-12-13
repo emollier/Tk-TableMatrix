@@ -99,6 +99,9 @@ Tk::MMutil::TkExtMakefile(
 				url => 'https://github.com/asb-capfan/Tk-TableMatrix.git',
 				web => 'https://github.com/asb-capfan/Tk-TableMatrix',
 			},
+			bugtracker => {
+				web => 'https://github.com/asb-capfan/Tk-TableMatrix/issues',
+			},
 		},
 	},
     @macro
