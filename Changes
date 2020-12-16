@@ -5,6 +5,9 @@ See ChangeLog for detailed changes.
 Release 1.27  2020-mm-dd
 
 * Specify GitHub issues as bugtracker
+* Incorporate change from Perl/Tk's myConfig:
+  exit gracefully if libX11 not found
+  (should prevent UNKNOWN reports from CPAN testers)
 
 Release 1.26  2020-10-26
 
