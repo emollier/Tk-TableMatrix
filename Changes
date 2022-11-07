@@ -8,6 +8,8 @@ See ChangeLog for detailed changes.
 * Incorporate change from Perl/Tk's myConfig:
   exit gracefully if libX11 not found
   (should prevent UNKNOWN reports from CPAN testers)
+* Fix build failures caused by an include path (possibly containing Tcl/Tk
+  headers) which was specified with higher precedence than Perl/Tk headers
 
 1.26  2020-10-26
 

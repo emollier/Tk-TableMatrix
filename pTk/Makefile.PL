@@ -32,7 +32,7 @@ Tk::MMutil::TkExtMakefile(
     'OBJECT'	=> '$(O_FILES)', 
     macro	=> { WINARCH     => $win_arch },
     'DEFINE'	=> $define,
-    'INC'	=> "$inc -I$ptkPath -I. -Ibitmaps",
+    'INC'	=> "-I$ptkPath -I. -Ibitmaps",
     'SKIP'	=> [qw( distclean dist makeaperl xs_o)],
     'clean'	=> {'FILES' => 'libpTk$(LIB_EXT)'}
 );
