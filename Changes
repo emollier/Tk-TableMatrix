@@ -2,7 +2,7 @@ Summary of Changes to Tk::TableMatrix
 
 See ChangeLog for detailed changes.
 
-1.27  2021-mm-dd
+1.28  2022-11-07
 
 * Specify GitHub issues as bugtracker
 * Incorporate change from Perl/Tk's myConfig:

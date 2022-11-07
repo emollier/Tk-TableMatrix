@@ -28,7 +28,7 @@ use Carp;
 use strict;
 use vars( '%tkPriv', '$VERSION');
 
-$VERSION = '1.27';
+$VERSION = '1.28';
 
 use Tk qw( Ev );
 
