@@ -2,6 +2,9 @@ Summary of Changes to Tk::TableMatrix
 
 See ChangeLog for detailed changes.
 
+1.29  2022-11-07
+* Removed blib/ directory unintentionally present in 1.28 distribution
+
 1.28  2022-11-07
 
 * Specify GitHub issues as bugtracker
