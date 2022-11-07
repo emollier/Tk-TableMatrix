@@ -88,7 +88,6 @@ Tk::MMutil::TkExtMakefile(
     },
 	'CONFIGURE_REQUIRES' => {
 		"ExtUtils::MakeMaker" => 6.52,
-		"Tk::MMtry" => 0,
 		"Tk::MMutil" => 0,
 	},
 	'META_MERGE' => {

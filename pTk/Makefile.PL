@@ -1,7 +1,6 @@
 use Config;
 use ExtUtils::MakeMaker;
 
-use Tk::MMtry qw(try_compile);
 use Tk::MMutil;
 
 
@@ -110,18 +109,6 @@ sub MY::post_initialize
     }
   }
  my @loose = ();
- if (defined($Config{'i_stdlib'}) && try_compile("config/Hstrtoul.c"))
-  {
-   push(@loose,'strtoul.c');
-  }
- if (defined($Config{'i_string'}) && try_compile("config/Hstrdup.c"))
-  {
-   push(@loose,'strdup.c');
-  }
- if (try_compile("config/Hstrcasecmp.c"))
-  {
-   push(@loose,'strcasecmp.c');
-  }
  $self->Tk::MMutil::mTk_CHO(\%mTk,@loose);
  my %files = ();
  $files{'windows.h'} = 1 if $win_arch eq 'open32';
