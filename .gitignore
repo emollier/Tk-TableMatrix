@@ -27,7 +27,19 @@ nytprof.out
 /pod/Makefile.old
 /pTk/Makefile
 /pTk/Makefile.old
+/MANIFEST
 /MANIFEST.bak
 /pm_to_blib
 /pTk/pm_to_blib
 /*.zip
+
+# Tk::MMutil::mTk_CHO output
+/pTk/*.h
+/pTk/*.c
+
+# xsubpp output
+/TableMatrix.c
+
+# make output
+/pod/pm_to_blib
+/pTk/libpTk.a
